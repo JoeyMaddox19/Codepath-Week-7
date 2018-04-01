@@ -19,7 +19,7 @@ Time spent: 7 hours spent in total
 2. (Required) Vulnerability Name or ID: Authenticated Stored Cross-Site Scripting (XSS)
   - [ ] Summary: As an editor, it is possible to create an XSS attack against other users by saving a post containing an XSS attack as a draft. When other users attempt to preview this draft, the Javascript in the post will run the XSS attack.
     - Vulnerability types: Cross-Site Scripting (XSS)
-    - Tested in version: 4.2
+    - Tested in version: 4.2.2
     - Fixed in version: 4.2.3
   - [ ] GIF Walkthrough: ![Alt Text](https://github.com/JoeyMaddox19/Codepath-Week-7/blob/master/Vuln_1.gif)
   - [ ] Steps to recreate: Login to the admin portion of of the WordPress as an editor. Create a post containing an XSS attack such as:  <img src=1 onerror=alert('XSS')>. Save this post as a draft. When another user previews this post, and the image fails to load, an alert will be triggered.  
