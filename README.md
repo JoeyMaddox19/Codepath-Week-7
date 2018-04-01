@@ -24,7 +24,7 @@ Time spent: 7 hours spent in total
   - [ ] GIF Walkthrough: 
   - [ ] Steps to recreate: Login to the admin portion of of the WordPress as an editor. Create a post containing an XSS attack such as:  <img src=1 onerror=alert('XSS')>. Save this post as a draft. When another user previews this post, and the image fails to load, an alert will be triggered.  
   - [ ] Affected source code:
-    - [Link 1](https://github.com/WordPress/WordPress/commit/7ab65139c6838910426567849c7abed723932b87)
+    - [Link 2](https://github.com/WordPress/WordPress/commit/7ab65139c6838910426567849c7abed723932b87)
 
 3. (Required) Vulnerability Name or ID: Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
   - [ ] Summary: Simple comments alone often are altered before they are actually posted (WordPress protects against basic Cross-Site Scripting attacks). However, embedded comments are not monitored as closely. The embedded comments are checked with many regular expressions to find out what the proper handling method is. Sucuri blog found that the youtube url has the highest likelihood for issues. However, the cross-site scripting function cannot have any <> characters since they will be cleaned. The handler takes the youtube URL and simply concatenates the rest of the embedded text. Since the autoembed function is unable to create a link, it returns the URL as typed. However, due to the sanitization property of the kses(), the returned URL will be cleaned. However, the shortcode parsing function has escape functions. Thus, the attack has the required XSS attribute values and then an escape function to escape from the parsing method. 
@@ -34,7 +34,7 @@ Time spent: 7 hours spent in total
   - [ ] GIF Walkthrough: 
   - [ ] Steps to recreate: Log in to the admin page as an editor. Edit one of the pages to include the embedded youtube url link: [embed src='https://youtube.com/embed/text\x3csvg onload=alert(1)\x3e'][/embed]
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link 3](https://github.com/WordPress/WordPress/commit/419c8d97ce8df7d5004ee0b566bc5e095f0a6ca8)
 
 
 ## Assets
