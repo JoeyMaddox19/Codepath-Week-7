@@ -21,7 +21,7 @@ Time spent: 7 hours spent in total
     - Vulnerability types: Cross-Site Scripting (XSS)
     - Tested in version: 4.2
     - Fixed in version: 4.2.3
-  - [ ] GIF Walkthrough: 
+  - [ ] GIF Walkthrough: ![Alt Text](https://github.com/JoeyMaddox19/Codepath-Week-7/blob/master/Vuln_1.gif)
   - [ ] Steps to recreate: Login to the admin portion of of the WordPress as an editor. Create a post containing an XSS attack such as:  <img src=1 onerror=alert('XSS')>. Save this post as a draft. When another user previews this post, and the image fails to load, an alert will be triggered.  
   - [ ] Affected source code:
     - [Link 2](https://github.com/WordPress/WordPress/commit/7ab65139c6838910426567849c7abed723932b87)
