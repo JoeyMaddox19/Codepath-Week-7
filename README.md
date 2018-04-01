@@ -50,7 +50,7 @@ GIFs created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while doing the work
+Describe any challenges encountered while doing the work: 
 Takes a lot of memory to host all of the VMs. 
 
 ## License
