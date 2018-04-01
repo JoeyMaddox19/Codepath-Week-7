@@ -11,7 +11,7 @@ Time spent: 7 hours spent in total
     - Vulnerability types: Cross-Site Scripting (XSS)
     - Tested in version: 4.2
     - Fixed in version: 4.2.1
-  - [ ] GIF Walkthrough: ![](
+  - [ ] GIF Walkthrough: ![](Codepath-Week-7/Vuln_1.gif)
   - [ ] Steps to recreate: View the webpage as an unauthorized user. Enter a comment such as: <a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a> where the AAAAAAAAA is repeated for at least 64kb. Upon entering the comment, an alert box will pop up. 
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
