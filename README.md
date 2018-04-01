@@ -11,7 +11,7 @@ Time spent: 7 hours spent in total
     - Vulnerability types: Cross-Site Scripting (XSS)
     - Tested in version: 4.2
     - Fixed in version: 4.2.1
-  - [ ] GIF Walkthrough: ![](Codepath-Week-7/Vuln_1.gif)
+  - [ ] GIF Walkthrough: ![Alt Text](https://github.com/JoeyMaddox19/Codepath-Week-7/blob/master/Vuln_3.gif)
   - [ ] Steps to recreate: View the webpage as an unauthorized user. Enter a comment such as: <a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a> where the AAAAAAAAA is repeated for at least 64kb. Upon entering the comment, an alert box will pop up. 
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
@@ -32,7 +32,7 @@ Time spent: 7 hours spent in total
     - Tested in version: 4.2
     - Fixed in version: 4.2.13
   - [ ] GIF Walkthrough: ![Alt Text](https://github.com/JoeyMaddox19/Codepath-Week-7/blob/master/Vuln_2.gif)
-  - [ ] Steps to recreate: Log in to the admin page as an editor. Edit one of the pages to include the embedded youtube url link: [embed src='https://youtube.com/embed/text\x3csvg onload=alert(1)\x3e'][/embed]
+  - [ ] Steps to recreate: Log in to the admin page as an editor. Edit one of the pages to include the embedded youtube url link: [embed src='https://youtube.com/embed/test\x3csvg onload=alert(1)\x3e'][/embed]
   - [ ] Affected source code:
     - [Link 3](https://github.com/WordPress/WordPress/commit/419c8d97ce8df7d5004ee0b566bc5e095f0a6ca8)
 
