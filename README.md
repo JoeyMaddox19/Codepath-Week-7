@@ -14,7 +14,7 @@ Time spent: 7 hours spent in total
   - [ ] GIF Walkthrough: ![Alt Text](https://github.com/JoeyMaddox19/Codepath-Week-7/blob/master/Vuln_3.gif)
   - [ ] Steps to recreate: View the webpage as an unauthorized user. Enter a comment such as: <a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a> where the AAAAAAAAA is repeated for at least 64kb. Upon entering the comment, an alert box will pop up. 
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link 1](https://wpvulndb.com/vulnerabilities/7945)
 
 2. (Required) Vulnerability Name or ID: Authenticated Stored Cross-Site Scripting (XSS)
   - [ ] Summary: As an editor, it is possible to create an XSS attack against other users by saving a post containing an XSS attack as a draft. When other users attempt to preview this draft, the Javascript in the post will run the XSS attack.
