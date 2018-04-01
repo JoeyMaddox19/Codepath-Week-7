@@ -12,7 +12,7 @@ Time spent: 7 hours spent in total
     - Tested in version: 4.2
     - Fixed in version: 4.2.1
   - [ ] GIF Walkthrough: ![Alt Text](https://github.com/JoeyMaddox19/Codepath-Week-7/blob/master/Vuln_3.gif)
-  - [ ] Steps to recreate: View the webpage as an unauthorized user. Enter a comment such as: <a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a> where the AAAAAAAAA is repeated for at least 64kb. Upon entering the comment, an alert box will pop up. 
+  - [ ] Steps to recreate: View the webpage as an unauthorized user. Enter a comment with an XSS alert followed by  AAAAAAAAAAAA...[64 kb]..AAA where the AAAAAAAAA is repeated for at least 64kb. Upon entering the comment, an alert box will pop up. 
   - [ ] Affected source code:
     - [Link 1](https://wpvulndb.com/vulnerabilities/7945)
 
@@ -27,7 +27,7 @@ Time spent: 7 hours spent in total
     - [Link 2](https://github.com/WordPress/WordPress/commit/7ab65139c6838910426567849c7abed723932b87)
 
 3. (Required) Vulnerability Name or ID: Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
-  - [ ] Summary: Simple comments alone often are altered before they are actually posted (WordPress protects against basic Cross-Site Scripting attacks). However, embedded comments are not monitored as closely. The embedded comments are checked with many regular expressions to find out what the proper handling method is. Sucuri blog found that the youtube url has the highest likelihood for issues. However, the cross-site scripting function cannot have any <> characters since they will be cleaned. The handler takes the youtube URL and simply concatenates the rest of the embedded text. Since the autoembed function is unable to create a link, it returns the URL as typed. However, due to the sanitization property of the kses(), the returned URL will be cleaned. However, the shortcode parsing function has escape functions. Thus, the attack has the required XSS attribute values and then an escape function to escape from the parsing method. 
+  - [ ] Summary: Simple comments alone often are altered before they are actually posted (WordPress protects against basic Cross-Site Scripting attacks). However, embedded comments are not monitored as closely. The embedded comments are checked with many regular expressions to find out what the proper handling method is. Sucuri blog found that the youtube url has vulnerabilities. The handler takes the youtube URL and simply concatenates the rest of the embedded text. Since the autoembed function is unable to create a link, it returns the URL as typed. However, due to the sanitization property of the parsing function, the returned URL will be cleaned. However, the shortcode parsing function has escape functions, and thus, the attack uses the required XSS attribute values and then an escape function to escape from the parsing method. 
     - Vulnerability types: Cross-Site Scripting (XSS)
     - Tested in version: 4.2
     - Fixed in version: 4.2.13
